@@ -1,0 +1,92 @@
+<!-- Creator     : groff version 1.23.0 -->
+<!-- CreationDate: Sat Mar  1 12:54:36 2025 -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="generator" content="groff -Thtml, see www.gnu.org">
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="Content-Style" content="text/css">
+<style type="text/css">
+       p       { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       pre     { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       table   { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       h1      { text-align: center }
+</style>
+<title></title>
+</head>
+<body>
+
+<hr>
+
+
+<p><i>PARPD</i>(8) System Manager&rsquo;s Manual
+<i>PARPD</i>(8)</p>
+
+<p style="margin-top: 1em"><b>NAME</b></p>
+
+<p style="margin-left:9%;">parpd &mdash; a Proxy ARP
+Daemon</p>
+
+<p style="margin-top: 1em"><b>SYNOPSIS</b></p>
+
+<p style="margin-left:17%;"><b>parpd</b> [<b>-dfl</b>]
+[<b>-c&nbsp;</b><i>file</i>] [interface] [...]</p>
+
+<p style="margin-top: 1em"><b>DESCRIPTION</b></p>
+
+<p style="margin-left:9%;"><b>parpd</b> is an
+implementation of the Proxy ARP Daemon described in <b>RFC
+1017</b>. Upon receiving an ARP request, <b>parpd</b> looks
+up the target address in the configuration file,
+<i>parpd.conf</i>(5). If <b>parpd</b> finds a match, it
+replies with the associated hardware address or the hardware
+address of the interface on which the reply came in.</p>
+
+<p style="margin-left:9%; margin-top: 1em">In normal
+operation, <b>parpd</b> forks a copy of itself and runs in
+the background. Errors are reported via
+<i>syslog</i>(3).</p>
+
+<p style="margin-top: 1em"><b>OPTIONS <br>
+-c</b> <i>file</i></p>
+
+<p style="margin-left:24%; margin-top: 1em">Use this
+<i>file</i> for configuration instead of the default
+<i>/etc/parpd.conf</i>.</p>
+
+<p style="margin-top: 1em"><b>-d</b></p>
+
+<p style="margin-left:24%; margin-top: 1em">Run in debug
+mode, with all the output to stderr. This option implies the
+<b>-f</b> option.</p>
+
+<p style="margin-top: 1em"><b>-f</b></p>
+
+<p style="margin-left:24%; margin-top: 1em">Run in the
+foreground.</p>
+
+<p style="margin-top: 1em"><b>-l</b></p>
+
+<p style="margin-left:24%; margin-top: 1em">Log all
+requests to syslog.</p>
+
+<p style="margin-top: 1em"><b>FILES</b> <i><br>
+/etc/parpd.conf</i> <b><br>
+SEE ALSO</b></p>
+
+<p style="margin-left:9%;"><i>parpd.conf</i>(5)</p>
+
+<p style="margin-top: 1em"><b>AUTHORS</b></p>
+
+<p style="margin-left:9%;">Roy Marples
+&lt;<i>roy@marples.name</i>&gt;</p>
+
+<p style="margin-top: 1em"><b>BUGS</b></p>
+
+<p style="margin-left:9%;">Please report them to
+http://roy.marples.name/projects/parpd Debian October 8,
+2019 <i>PARPD</i>(8)</p>
+<hr>
+</body>
+</html>

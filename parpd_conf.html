@@ -1,0 +1,82 @@
+<!-- Creator     : groff version 1.23.0 -->
+<!-- CreationDate: Sat Mar  1 12:40:28 2025 -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="generator" content="groff -Thtml, see www.gnu.org">
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="Content-Style" content="text/css">
+<style type="text/css">
+       p       { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       pre     { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       table   { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       h1      { text-align: center }
+</style>
+<title></title>
+</head>
+<body>
+
+<hr>
+
+
+<p><i>PARPD.CONF</i>(5) File Formats Manual
+<i>PARPD.CONF</i>(5)</p>
+
+<p style="margin-top: 1em"><b>NAME</b></p>
+
+<p style="margin-left:9%;">parpd.conf &mdash; Proxy ARP
+Daemon configuration file</p>
+
+<p style="margin-top: 1em"><b>DESCRIPTION</b></p>
+
+<p style="margin-left:9%;">The <b>parpd.conf</b> file maps
+a range of inet addresses to be replied to by
+<i>parpd</i>(8). Lines consist of a command, an inet address
+and an option Ethernet address to respond with. Subsequent
+rules override prior rules. A &lsquo;#&rsquo; character
+indicates the beginning of a comment; characters up to the
+end of the line are not interpreted by <b>parpd</b>.</p>
+
+<p style="margin-left:9%; margin-top: 1em">Each line in
+<b>parpd.conf</b> has the format:</p>
+
+<p style="margin-left:17%;"><b>command
+[inet-address[/cidr][/netmask]][iface]
+[hardware-address]</b></p>
+
+<p style="margin-left:9%; margin-top: 1em">Valid commands
+are <b>proxy</b>, <b>halfproxy</b>, <b>ignore</b> and
+<b>interface</b>. The <b>halfproxy</b> command is the same
+as <b>proxy</b>, but will ignore requests from an
+unspecified address. Using the <b>interface</b> command, you
+can specify an interface on which all subsequent commands
+are only used on. Inet addresses are specified in the
+conventional dot (&ldquo;.&rdquo;) notation with an optional
+<b>cidr</b> or <b>netmask</b>. Hardware addresses are
+expressed as six hexadecimal numbers separated by colons,
+e.g. &quot;08:00:20:00:5a:bc&quot;.</p>
+
+<p style="margin-left:9%; margin-top: 1em"><b>attack</b> is
+a special command which proxies the address after receiving
+two Gratuitous ARP relies - ie both source and destination
+addresses are the same. This is only useful for testing
+<b>RFC 5227</b> implementations.</p>
+
+<p style="margin-top: 1em"><b>SEE ALSO</b></p>
+
+<p style="margin-left:9%;"><i>parpd</i>(8)</p>
+
+<p style="margin-top: 1em"><b>AUTHORS</b></p>
+
+<p style="margin-left:9%;">Roy Marples
+&lt;<i>roy@marples.name</i>&gt;</p>
+
+<p style="margin-top: 1em"><b>BUGS</b></p>
+
+<p style="margin-left:9%;">Please report them to
+http://roy.marples.name/projects/parpd Debian July 23, 2024
+<i>PARPD.CONF</i>(5)</p>
+<hr>
+</body>
+</html>
